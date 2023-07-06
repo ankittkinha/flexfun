@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Crimson+Text:ital@1&family=Pathway+Extreme:ital,wght@1,400;1,500&family=Sen:wght@400;700&display=swap');
+
+* {
+ 
+  font-family: 'Pathway Extreme', sans-serif;
+
+}
+
+.panel {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.panels {
+  display: flex;
+  justify-content: center;
+  border: 10px solid gray;
+  height: 100%;
+}
+
+body {
+  background-color: red;
+  height: 98vh;
+  margin: 0;
+}
+
+.panel1 {
+  background-image: url("https://images.unsplash.com/photo-1456389573961-0ae56d45961e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1352&q=80");
+}
+
+.panel2 {
+  background-image: url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+}
+
+.panel3 {
+  background-image: url("https://images.unsplash.com/photo-1620693654464-7d33c7eac5a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80");
+}
+
+.panel4 {
+  background-image: url("https://images.unsplash.com/photo-1500463959177-e0869687df26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+}
+
+.panel5 {
+  background-image: url("https://images.unsplash.com/photo-1496526311033-8a80ae14a1f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+}
+
+.panel1:hover,
+.panel2:hover,
+.panel3:hover,
+.panel4:hover,
+.panel5:hover {
+  animation-name: increaseWidth;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes increaseWidth {
+  from {
+    width: 20%;
+  }
+
+  to {
+    width: 60%;
+  }
+}
+
+.panel1:hover .top,
+.panel2:hover .top,
+.panel3:hover .top,
+.panel4:hover .top,
+.panel5:hover .top {
+  display: block;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-name: moveTopText;
+}
+
+@keyframes moveTopText {
+  from {
+    top: -14%
+  }
+
+  to {
+    top: 15%
+  }
+}
+
+.panel1:hover .bottom,
+.panel2:hover .bottom,
+.panel3:hover .bottom,
+.panel4:hover .bottom,
+.panel5:hover .bottom {
+  display: block;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-name: moveBottomText;
+}
+
+@keyframes moveBottomText {
+  from {
+    bottom: -14%
+  }
+
+  to {
+    bottom: 15%
+  }
+}
+
+.hideTxt {
+  display: none;
+}
+
+p {
+  display: block;
+  font-size: 5em;
+  color: white;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.hideTxt {
+  font-size: 4em;
+}
+
+.top {
+  position: absolute;
+}
+
+.bottom {
+  position: absolute;
+}
